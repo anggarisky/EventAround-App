@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent">
     
@@ -14,12 +14,20 @@
         android:background="@drawable/bgitemcustom"
         android:layout_height="300dp">
 
-        <ImageView
-            android:id="@+id/eventpicture"
-            android:src="@drawable/picone"
-            android:scaleType="centerCrop"
-            android:layout_width="match_parent"
-            android:layout_height="150dp" />
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            app:shape_roundRect_topRightRadius="8dp"
+            app:shape_roundRect_topLeftRadius="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/eventpicture"
+                android:src="@drawable/picone"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
 
         <TextView
             android:fontFamily="@font/mr"
